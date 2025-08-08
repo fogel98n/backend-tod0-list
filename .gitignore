@@ -1,0 +1,29 @@
+# Node modules (dependencias)
+node_modules/
+
+# Archivos de entorno (nunca los subas)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cache y archivos temporales
+.DS_Store
+*.swp
+*.swo
+
+# Archivos del sistema o editores
+.vscode/
+.idea/
+
+# Salidas de producción (opcional)
+dist/
+build/
+
+# nodemon archivo de reinicio (opcional)
+nodemon-debug.log
+
+# Sistema operativo
+Thumbs.db
