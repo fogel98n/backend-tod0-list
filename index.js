@@ -1,29 +1,16 @@
-// Importar dependencias
+const routes=require("./api/endpoints")
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config(); // Carga variables del archivo .env
+require('dotenv').config(); 
 
-// Crear la app
 const app = express();
-
-// Middlewares
 app.use(cors());
-app.use(express.json()); // Para parsear JSON
-
-// Ruta de prueba
-app.get('/', (req, res) => {
-  res.send('¡Servidor Express funcionando!');
-});
-
-// Ruta de API ejemplo
-app.get('/api/saludo', (req, res) => {
-  res.json({ mensaje: 'Hola desde la API' });
-});
-
-// Puerto desde .env o por defecto 3000
+app.use(express.json()); 
 const PORT = process.env.PORT || 3000;
 
-// Iniciar servidor
+
+app.use("/", routes);
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
